@@ -20,6 +20,7 @@ namespace BigShool.Controllers
             db = new ApplicationDbContext();
         }
 
+
         [HttpPost]
         public IHttpActionResult Attend(AttendanceDto attendanceDto)
         {
@@ -29,9 +30,10 @@ namespace BigShool.Controllers
                 return BadRequest("The Attendance already exists !");
             }
             var attendance = new Attendance
-            {
-                CourseId = attendanceDto.CourseId,
-                AttendeeId = userId
+            { 
+                AttendeeId = userId,
+                CourseId = attendanceDto.CourseId
+               
             };
             db.Attendances.Add(attendance);
             db.SaveChanges();
