@@ -237,6 +237,7 @@
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
     <Content Include="Content\site.css" />
+    <Content Include="Scripts\bigshool.js" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <None Include="Scripts\jquery-3.3.1.intellisense.js" />
@@ -284,15 +285,19 @@
     <Content Include="Views\Manage\VerifyPhoneNumber.cshtml" />
     <Content Include="Views\Shared\Lockout.cshtml" />
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
-    <Content Include="Views\Courses\Create.cshtml" />
+    <Content Include="Views\Courses\CourseForm.cshtml" />
     <Content Include="Views\Courses\Delete.cshtml" />
     <Content Include="Views\Courses\Details.cshtml" />
     <Content Include="Views\Courses\Edit.cshtml" />
     <Content Include="Views\Courses\Index.cshtml" />
     <Content Include="Views\Courses\Attending.cshtml" />
+    <Content Include="Views\Courses\Edit2.cshtml" />
+    <Content Include="Views\Courses\Mine.cshtml" />
+    <Content Include="Views\Courses\Follow.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Content\images\" />
     <Folder Include="Views\Attendances\" />
   </ItemGroup>
   <ItemGroup>

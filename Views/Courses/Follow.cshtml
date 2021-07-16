@@ -1,0 +1,14 @@
+﻿@model IEnumerable<BigShool.Models.Following>
+@{
+    ViewBag.Title = "Follow";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@foreach (var item in Model)
+{
+    <p>@item.FollowerId</p>
+
+    <p>@item.FolloweeId</p>
+  
+}
+

@@ -30,14 +30,16 @@ namespace BigShool.Controllers
                 return BadRequest("The Attendance already exists !");
             }
             var attendance = new Attendance
-            { 
+            {
                 AttendeeId = userId,
                 CourseId = attendanceDto.CourseId
-               
+
             };
             db.Attendances.Add(attendance);
             db.SaveChanges();
             return Ok();
         }
+
+
     }
 }

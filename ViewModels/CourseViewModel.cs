@@ -9,8 +9,11 @@ namespace BigShool.ViewModels
 {
     public class CourseViewModel
     {
+        public int Id { get; set; }
         public IEnumerable<Course> UpcommingCourses { get; set; }
         public bool ShowAction { get; set; }
+
+        public string Images { get; set; }
 
         [Required]
         public string Place { get; set; }
@@ -22,6 +25,13 @@ namespace BigShool.ViewModels
         public string Time { get; set; }
         [Required]
         public byte Category { get; set; }
+
+        public string Heading { get; set; }
+
+        public string action
+        {
+            get { return (Id != 0) ? "Update" : "Create"; }
+        }
         public IEnumerable<Category> Categories { get; set; }
 
         public DateTime GetDateTime()

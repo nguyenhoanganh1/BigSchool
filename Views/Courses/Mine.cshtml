@@ -1,27 +1,24 @@
-﻿@model BigShool.ViewModels.CourseViewModel
+﻿@model IEnumerable<BigShool.Models.Course>
 @{
-    ViewBag.Title = "Attending Page";
+    ViewBag.Title = "Mine";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+ 
 }
 
     <div class="container">
-        <h3>Khóa học đánh dấu đã đến</h3>
+        <h3>Danh sách các khóa học</h3>
         <div class="row ">
-            @foreach (var item in Model.UpcommingCourses)
+            @foreach (var item in Model)
             {
                 <div class="col-md-4">
                     <div class="panel panel-info">
                         <div class="panel-heading">
                             <div class="details">
                                 <div class="lecturer">
-                                    @if (Model.ShowAction)
-                                    { 
-                                    
-                                        <strong>
+                                     <strong>
                                            @item.Lecturer.Name
-                                        </strong>
-
-                                        <button data-user-id="@item.LecturerId" class="btn-follow btn btn-success pull-right btn-sm js-toggle-follow">Follow</button>
-                                    }
+                                     </strong>
+                                    <button data-user-id="@item.LecturerId" class="btn-follow btn btn-success pull-right btn-sm js-toggle-follow">Follow</button>
                                 </div>
                             </div>
                         </div>
@@ -47,11 +44,7 @@
                                         @item.Category.Name
                                     </strong>
 
-
-                                    @if (Model.ShowAction)
-                                    {
-                                        <button data-course-id="@item.Id" class="col-md-offset-1 btn btn-primary btn-sm js-toggle-attendance">Going?</button>
-                                    }
+                                     <button data-course-id="@item.Id" class="col-md-offset-1 btn btn-primary btn-sm js-toggle-attendance">Going?</button>                                   
                                 </div>
                             </div>
                         </div>
@@ -61,3 +54,4 @@
 
         </div>
     </div>
+

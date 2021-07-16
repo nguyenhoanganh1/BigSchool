@@ -14,7 +14,7 @@
     <tr>
         <th>
             <p>Name</p>
-            
+
         </th>
         <th>
             <p>LecturerId</p>
@@ -25,7 +25,9 @@
         <th>
             <p>DateTime</p>
         </th>
-
+        <th>
+            <p>Image</p>
+        </th>
     </tr>
 
     @foreach (var item in Model)
@@ -44,9 +46,7 @@
                 @Html.DisplayFor(modelItem => item.DateTime)
             </td>
             <td>
-                @Html.ActionLink("Edit", "Edit", new { id = item.Id }) |
-                @Html.ActionLink("Details", "Details", new { id = item.Id }) |
-                @Html.ActionLink("Delete", "Delete", new { id = item.Id })
+                <img src="~/Content/images/@item.Images" />
             </td>
         </tr>
     }
